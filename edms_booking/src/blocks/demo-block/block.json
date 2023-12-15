@@ -1,0 +1,29 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "edms_booking/demo-block",
+	"version": "0.1.0",
+	"title": "Demo Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Demo block scaffolded with HotelBookingOnline.",
+	"supports": {
+		"color": {
+			"text": true,
+			"background": true,
+			"link": true
+		}
+	},
+	"attributes": {
+		"selectedUser": {
+			"type": "string"
+		},
+		"user": {
+			"type": "object"
+		}
+	},
+	"textdomain": "edms_booking",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

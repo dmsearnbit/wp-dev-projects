@@ -1,0 +1,51 @@
+{
+  "name": "edms_booking",
+  "version": "0.4.0-beta",
+  "description": "A starter WordPress plugin scaffold which comes pre-configured for block development, admin settings and standard WordPress plugin rules.",
+  "main": "build/index.js",
+  "scripts": {
+    "install-scripts": "composer install && npm install",
+    "dev:blocks": "wp-scripts start",
+    "dev:dashboard": "wp-scripts start --webpack-src-dir=src/dashboard --output-path=build/dashboard",
+    "dev:php": "composer install",
+    "build:blocks": "wp-scripts build --webpack-src-dir=src/blocks --output-path=build/blocks",
+    "build:dashboard": "wp-scripts build --webpack-src-dir=src/dashboard --output-path=build/dashboard",
+    "build:all": "composer install --no-dev && npm run build:blocks && npm run build:dashboard",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:md:docs": "wp-scripts lint-md-docs",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "npm run build:all && wp-scripts plugin-zip"
+  },
+  "author": "EDMS",
+  "license": "GPLv2 or later",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.4",
+    "@wordpress/scripts": "^26.6.0",
+    "autoprefixer": "^10.4.14",
+    "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
+    "@wordpress/api-fetch": "^6.36.0",
+    "@wordpress/components": "^25.1.0",
+    "@wordpress/data": "^9.5.0",
+    "@wordpress/element": "^5.13.0",
+    "@wordpress/i18n": "^4.36.0",
+    "@wordpress/url": "^3.40.0",
+    "clsx": "^1.2.1",
+    "react-hot-toast": "^2.4.1",
+    "react-router-dom": "^6.14.1"
+  },
+  "files": [
+    "assets",
+    "build",
+    "includes",
+    "vendor",
+    "changelog.json",
+    "edms_booking.php"
+  ]
+}
